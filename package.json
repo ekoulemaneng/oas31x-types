@@ -1,0 +1,27 @@
+{
+  "name": "random-string-builder",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [
+    "string",
+    "generator"
+  ],
+  "author": "ekoulemaneng <ekoulemaneng@gmail.com>",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "type": "module",
+  "scripts": {
+    "test": "mocha --require ts-node/register test/*.ts",
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.1",
+    "mocha": "^10.2.0",
+    "typescript": "^5.0.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ekoulemaneng/random-string-builder.git"
+  },
+  "homepage": "https://github.com/ekoulemaneng/random-string-builder"
+}
