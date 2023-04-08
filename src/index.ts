@@ -75,7 +75,7 @@ const generator = (length: number = 32, readable: boolean = false, charset_type:
         if (c_charset) array = c_charset.split(' ').join('').split('')
     }
     // if needed, refine the array
-    if (readable) array = array.filter(item => !['0', 'O', 'I', 'l'].includes(item))
+    if (readable) array = array.filter((item: string) => !['0', 'O', 'I', 'l'].includes(item))
     // Set the raw result
     let result = ''
     for (let i = 0; i < length; i++) result += array[Math.floor(Math.random() * array.length)]
@@ -86,4 +86,4 @@ const generator = (length: number = 32, readable: boolean = false, charset_type:
     return result
 }
 
-export default generator
+export = generator

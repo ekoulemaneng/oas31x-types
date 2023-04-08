@@ -1,6 +1,6 @@
 import assert from 'assert'
-import randomStringGenerator from '../src'
-import { alphabetic_array, alphanumeric_array, binary_array, hex_array, numeric_array, octal_array, password_array } from '../src/charsets'
+import randomStringGenerator from '..'
+import { alphabetic_array, alphanumeric_array, binary_array, hex_array, numeric_array, octal_array, password_array } from '../charsets'
 
 describe('The strings generator function', () => {
 
@@ -36,7 +36,7 @@ describe('The strings generator function', () => {
                 // Setup
                 const expected = true
                 // Exercise
-                const result = randomStringGenerator().split('').every(char => alphanumeric_array.includes(char))
+                const result = randomStringGenerator().split('').every((char: string) => alphanumeric_array.includes(char))
                 // Verify
                 assert.equal(result, expected)
             }
@@ -102,7 +102,7 @@ describe('The strings generator function', () => {
                 const input = true
                 const expected = true
                 // Exercise
-                const actual = randomStringGenerator(undefined, input).split('').every(char => !['0', 'O', 'I', 'l'].includes(char))
+                const actual = randomStringGenerator(undefined, input).split('').every((char: string) => !['0', 'O', 'I', 'l'].includes(char))
                 // Verify
                 assert.equal(actual, expected)
             }
@@ -115,7 +115,7 @@ describe('The strings generator function', () => {
                 const input = false
                 const expected = true
                 // Exercise
-                const actual = randomStringGenerator(undefined, input).split('').every(char => ['0', 'O', 'I', 'l'].includes(char) || !['0', 'O', 'I', 'l'].includes(char))
+                const actual = randomStringGenerator(undefined, input).split('').every((char: string) => ['0', 'O', 'I', 'l'].includes(char) || !['0', 'O', 'I', 'l'].includes(char))
                 // Verify
                 assert.equal(actual, expected)
             }
@@ -128,7 +128,7 @@ describe('The strings generator function', () => {
                 const input = undefined
                 const expected = true
                 // Exercise
-                const actual = randomStringGenerator(undefined, input).split('').every(char => ['0', 'O', 'I', 'l'].includes(char) || !['0', 'O', 'I', 'l'].includes(char))
+                const actual = randomStringGenerator(undefined, input).split('').every((char: string) => ['0', 'O', 'I', 'l'].includes(char) || !['0', 'O', 'I', 'l'].includes(char))
                 // Verify
                 assert.equal(actual, expected)
             }
@@ -167,7 +167,7 @@ describe('The strings generator function', () => {
             const input = 'predefined'
             const expected = 'string'
             // Exercise
-            const actual = typeof randomStringGenerator(undefined, undefined, 'predefined')
+            const actual = typeof randomStringGenerator(undefined, undefined, input)
             // Verify
             assert.strictEqual(actual, expected)
         })
@@ -189,7 +189,17 @@ describe('The strings generator function', () => {
                 }
                 const expected = true
                 // Exercise
-                const actual = randomStringGenerator(undefined, undefined, charsetTypeInput, predefinedCharsetInput as 'alphabetic').split('').every(char => charsets[predefinedCharsetInput].includes(char))
+                const actual = randomStringGenerator(undefined, undefined, charsetTypeInput, predefinedCharsetInput as 'alphabetic').split('').every((char: string) => {
+                    if (!predefinedCharsetInput) return false
+                    else {
+                        if (!charsets) return false
+                        else {
+                            const arr = charsets[predefinedCharsetInput]
+                            if (!arr) return false
+                            return arr.includes(char)
+                        } 
+                    }
+                })
                 // Verify
                 assert.strictEqual(actual, expected)
             }
@@ -228,7 +238,7 @@ describe('The strings generator function', () => {
             const customizedCharsetInput = 'dfdd  gfff '
             const expected = true
             // Exercise 
-            const actual = randomStringGenerator(undefined, undefined, charsetTypeInput, undefined, customizedCharsetInput).split('').every(char => char !== ' ')
+            const actual = randomStringGenerator(undefined, undefined, charsetTypeInput, undefined, customizedCharsetInput).split('').every((char: string) => char !== ' ')
             // Verify
             assert.strictEqual(actual, expected)
         }) 
@@ -244,7 +254,7 @@ describe('The strings generator function', () => {
                 const input = 'uppercase'
                 const expected = true
                 // Exercise
-                const actual = randomStringGenerator(undefined, undefined, undefined, undefined, undefined, input).split('').every(char => {
+                const actual = randomStringGenerator(undefined, undefined, undefined, undefined, undefined, input).split('').every((char: string) => {
                     return !['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'].includes(char)
                 })
                 // Verify
@@ -259,7 +269,7 @@ describe('The strings generator function', () => {
                 const input = 'lowercase'
                 const expected = true
                 // Exercise
-                const actual = randomStringGenerator(undefined, undefined, undefined, undefined, undefined, input).split('').every(char => {
+                const actual = randomStringGenerator(undefined, undefined, undefined, undefined, undefined, input).split('').every((char: string) => {
                     return !['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Z'].includes(char)
                 })
                 // Verify
