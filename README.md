@@ -1,21 +1,21 @@
-# Random String Generator
+# Random String Builder
 
 A npm package to generate string randomly.
 
 ## Installation
 To install this package, run the following command:
 ```
-npm install random-string-generator --save
+npm install random-string-builder --save
 ```
 or
 ```
-yarn add random-string-generator
+yarn add random-string-builder
 ```
 
 ## Usage
 To use this package, import it into your project and call its function:
 ```javascript
-import generator from 'random-string-generator'
+import generator from 'random-string-builder'
 
 const str = generator(8, false, 'predefined', 'alphabetic', undefined, 'uppercase')
 
