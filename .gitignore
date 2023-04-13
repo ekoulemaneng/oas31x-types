@@ -14,4 +14,3 @@ node_modules
 .editorconfig
 yarn.lock
 dist
-random-string-builder.code-workspace

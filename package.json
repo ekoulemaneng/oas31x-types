@@ -1,24 +1,22 @@
 {
-  "name": "random-string-builder",
-  "version": "1.0.1",
-  "description": "This package generare strings randomly.",
+  "name": "oas31x-types",
+  "version": "1.0.0",
+  "description": "This package provides OpenAPI v3.1.x types for TypeScript developers.",
   "keywords": [
-    "string",
-    "generator",
-    "functional"
+    "openapi 3.1.x",
+    "typescript",
+    "types"
   ],
   "author": "ekoulemaneng <ekoulemaneng@gmail.com>",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
-  "module": "src/index.ts",
+  "types": "types/index.d.ts",
+  "module": "types/index.d.ts",
   "files": [
     "README.md",
     "package.json",
-    "dist"
+    "types"
   ],
   "scripts": {
-    "test": "mocha",
-    "build": "tsc"
+    "test": "mocha"
   },
   "devDependencies": {
     "@types/mocha": "^10.0.1",
