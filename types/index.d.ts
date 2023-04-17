@@ -1,39 +1,73 @@
-import Callback from './openapi-objects/callback'
-import Components from './openapi-objects/components'
-import Contact from './openapi-objects/contact'
-import Discriminator from './openapi-objects/discriminator'
-import Document from './openapi-objects/document'
-import Encoding from './openapi-objects/encoding'
-import Example from './openapi-objects/example'
-import ExternalDocumantation from './openapi-objects/external-documentation'
-import Header from './openapi-objects/header'
-import HttpStatusCode from './openapi-objects/http-status-code'
-import Info from './openapi-objects/info'
-import License from './openapi-objects/license'
-import Link from './openapi-objects/link'
-import MediaType from './openapi-objects/media-type'
-import OAuthFlow from './openapi-objects/o-auth-flow'
-import OAuthFlows from './openapi-objects/o-auth-flows'
-import Operation from './openapi-objects/operation'
-import Parameter from './openapi-objects/parameter'
-import PathItem from './openapi-objects/path-item'
-import Paths from './openapi-objects/paths'
-import Reference from './openapi-objects/reference'
-import RequestBody from './openapi-objects/request-body'
-import Response from './openapi-objects/response'
-import Responses from './openapi-objects/responses'
-import Schema from './openapi-objects/schema'
-import SecurityRequirement from './openapi-objects/security-requirement'
-import SecurityScheme from './openapi-objects/security-scheme'
-import ServerVariable from './openapi-objects/server-variable'
-import Server from './openapi-objects/server'
-import SpecificationExtensions from './openapi-objects/specification-extension'
-import Tag from './openapi-objects/tag'
-import XML from './openapi-objects/xml'
+import * as v31xtypes from './3.1.x/index' 
+import * as v30xtypes from './3.0.x/index'
 
-export type { Callback, Components, Contact, Discriminator, Document, Encoding, Example, ExternalDocumantation,
-    Header, HttpStatusCode, Info, License, Link, MediaType, OAuthFlow, OAuthFlows, Operation, Parameter, PathItem,
-    Paths, Reference, RequestBody, Response, Responses, Schema, SecurityRequirement, SecurityScheme, Server, ServerVariable,
-    SpecificationExtensions, Tag, XML
+export namespace OpenAPIv31x {
+    // Types
+    export type Callback = v31xtypes.Callback
+    export type Components = v31xtypes.Components
+    export type Contact = v31xtypes.Contact
+    export type Discriminator = v31xtypes.Discriminator
+    export type Encoding = v31xtypes.Encoding
+    export type Example = v31xtypes.Example
+    export type ExternalDocumentation = v31xtypes.ExternalDocumentation
+    export type Header = v31xtypes.Header
+    export type Info = v31xtypes.Info
+    export type License = v31xtypes.License
+    export type Link = v31xtypes.Link
+    export type MediaType = v31xtypes.MediaType
+    export type OAuthFlow = v31xtypes.OAuthFlow
+    export type OAuthFlows = v31xtypes.OAuthFlows
+    export type OpenAPI = v31xtypes.OpenAPI
+    export type Operation = v31xtypes.Operation
+    export type Parameter = v31xtypes.Parameter
+    export type PathItem = v31xtypes.PathItem
+    export type Paths = v31xtypes.Paths
+    export type Reference = v31xtypes.Reference
+    export type RequestBody = v31xtypes.RequestBody
+    export type Response = v31xtypes.Response
+    export type Responses = v31xtypes.Responses
+    export type Schema = v31xtypes.Schema
+    export type SecurityRequirement = v31xtypes.SecurityRequirement
+    export type SecurityScheme = v31xtypes.SecurityScheme
+    export type Server = v31xtypes.Server
+    export type ServerVariable = v31xtypes.ServerVariable
+    export type SpecificationExtensions = v31xtypes.SpecificationExtensions
+    export type Tag = v31xtypes.Tag
+    export type XML = v31xtypes.XML
+}
+
+export namespace OpenAPIv30x {
+    // Types
+    export type Callback = v30xtypes.Callback
+    export type Components = v30xtypes.Components
+    export type Contact = v30xtypes.Contact
+    export type Discriminator = v30xtypes.Discriminator
+    export type Encoding = v30xtypes.Encoding
+    export type Example = v30xtypes.Example
+    export type ExternalDocumentation = v30xtypes.ExternalDocumentation
+    export type Header = v30xtypes.Header
+    export type Info = v30xtypes.Info
+    export type License = v30xtypes.License
+    export type Link = v30xtypes.Link
+    export type MediaType = v30xtypes.MediaType
+    export type OAuthFlow = v30xtypes.OAuthFlow
+    export type OAuthFlows = v30xtypes.OAuthFlows
+    export type OpenAPI = v30xtypes.OpenAPI
+    export type Operation = v30xtypes.Operation
+    export type Parameter = v30xtypes.Parameter
+    export type PathItem = v30xtypes.PathItem
+    export type Paths = v30xtypes.Paths
+    export type Reference = v30xtypes.Reference
+    export type RequestBody = v30xtypes.RequestBody
+    export type Response = v30xtypes.Response
+    export type Responses = v30xtypes.Responses
+    export type Schema = v30xtypes.Schema
+    export type SecurityRequirement = v30xtypes.SecurityRequirement
+    export type SecurityScheme = v30xtypes.SecurityScheme
+    export type Server = v30xtypes.Server
+    export type ServerVariable = v30xtypes.ServerVariable
+    export type SpecificationExtensions = v30xtypes.SpecificationExtensions
+    export type Tag = v30xtypes.Tag
+    export type XML = v30xtypes.XML
 }
 

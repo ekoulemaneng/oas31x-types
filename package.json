@@ -1,15 +1,17 @@
 {
-  "name": "oas31x-types",
+  "name": "openapi-objects-types",
   "version": "1.0.0",
-  "description": "This package provides OpenAPI v3.1.x types for TypeScript developers.",
+  "description": "TypeScript library provide OpenAPI objects types for TypeScript developers. For 3.1.x and 3.0.x versions.",
   "keywords": [
+    "openapi 3.0.x",
     "openapi 3.1.x",
     "typescript",
     "types"
   ],
   "author": "ekoulemaneng <ekoulemaneng@gmail.com>",
+  "license": "MIT",
   "types": "types/index.d.ts",
-  "module": "types/index.d.ts",
+  "module": "types/index.ts",
   "files": [
     "README.md",
     "package.json",
@@ -26,10 +28,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ekoulemaneng/random-string-builder.git"
+    "url": "https://github.com/ekoulemaneng/openapi-objects-types.git"
   },
   "bugs": {
-    "url": "https://github.com/ekoulemaneng/random-string-builder/issues"
+    "url": "https://github.com/ekoulemaneng/openapi-objects-types/issues"
   },
-  "homepage": "https://github.com/ekoulemaneng/random-string-builder#readme"
+  "homepage": "https://github.com/ekoulemaneng/openapi-objects-types#readme"
 }
