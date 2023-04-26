@@ -1,37 +1,4 @@
 {
   "name": "openapi-objects-types",
-  "version": "1.1.0",
-  "description": "TypeScript library provide OpenAPI objects types for TypeScript developers. For 3.1.x and 3.0.x versions.",
-  "keywords": [
-    "openapi 3.0.x",
-    "openapi 3.1.x",
-    "typescript",
-    "types"
-  ],
-  "author": "ekoulemaneng <ekoulemaneng@gmail.com>",
-  "license": "MIT",
-  "types": "types/index.d.ts",
-  "module": "types/index.ts",
-  "files": [
-    "README.md",
-    "package.json",
-    "types"
-  ],
-  "scripts": {
-    "test": "mocha"
-  },
-  "devDependencies": {
-    "@types/mocha": "^10.0.1",
-    "mocha": "^10.2.0",
-    "ts-node": "^10.9.1",
-    "typescript": "^5.0.3"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/ekoulemaneng/openapi-objects-types.git"
-  },
-  "bugs": {
-    "url": "https://github.com/ekoulemaneng/openapi-objects-types/issues"
-  },
-  "homepage": "https://github.com/ekoulemaneng/openapi-objects-types#readme"
+  "packageManager": "yarn@3.3.1"
 }
