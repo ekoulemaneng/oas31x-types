@@ -190,9 +190,7 @@ export type Response = {
     links?: Record<string, Link>
 } & SpecificationExtensions
 
-export type Responses = {
-    default?: Response | Reference
-} & Partial<Record<HTTPStatusCode, Response | Reference>> & SpecificationExtensions
+export type Responses = Partial<Record<HTTPStatusCode, Response | Reference>> & SpecificationExtensions
 
 export type Schema = Partial<JSONSchema> & {
     discriminator?: Discriminator
